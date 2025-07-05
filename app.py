@@ -29,8 +29,7 @@ docsearch = PineconeVectorStore.from_existing_index(
 
 # Create retriever from Pinecone
 retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 3})
-
-# Replace OpenAI with Ollama LLM
+# Initialize Ollama LLM
 llm = OllamaLLM(model="llama3")
 
 # Prompt setup
